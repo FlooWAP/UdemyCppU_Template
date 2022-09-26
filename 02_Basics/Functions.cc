@@ -1,26 +1,22 @@
 #include <cstdint>
 #include <iostream>
 
-int main()
+bool game(std::int32_t lower_bound, std::int32_t upper_bound)
 {
     std::int32_t temp = 0;
     std::uint32_t user_input = 0;
 
     while (true)
     {
-        std::cout << "Please enter a value in the range [0, 10]: ";
+        std::cout << "Please enter a value in the range [" << lower_bound << ", " << upper_bound << "]: ";
         std::cin >> temp;
 
-        // && := und
-        // || := oder
-        // >, <, >=, <=, ==, !=
-
-        bool check1 = temp < 0;
-        bool check2 = temp > 10;
+        bool check1 = temp < lower_bound;
+        bool check2 = temp > upper_bound;
         if (check1 || check2)
         {
             std::cout << "Incorrect input\n";
-            break;
+            return false;
         }
         else
         {
@@ -29,6 +25,13 @@ int main()
 
         std::cout << "You entered: " << user_input << std::endl;
     }
+
+    return true;
+}
+
+int main()
+{
+    game(0, 5);
 
     return 0;
 }
