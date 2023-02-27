@@ -3,7 +3,6 @@
 int main()
 {
     std::cout << "Hello World!" << std::endl;
-    std::cout << "Git-Test" << std::endl;
 
     return 0;
 }
