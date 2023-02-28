@@ -13,6 +13,10 @@ int main()
         {
             std::cout << "You won!" << std::endl;
         }
+        else if (number == 2)
+        {
+            std::cout << "You won the wooden spoon" << std::endl;
+        }
         else
         {
             std::cout << "You lost!" << std::endl;
