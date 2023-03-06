@@ -31,7 +31,7 @@ int main()
 
     std::cout << "The number " << number_input << " is a prime number? " << std::boolalpha << is_prime << std::endl;
 
-    /*if ((number_input % number_input == 0) && (number_input % 1 == 0))
+    /*if ((number_input % number_input == 0) && (number_input % 1 == 0)) //Trifft ja auf jede Zahl zu! Keine Prüfung, ob durch andere Zahlen teilbar mit Restwert 0!!
     {
         std::cout << number_input << " is a prime number!" << std::endl;
     }
