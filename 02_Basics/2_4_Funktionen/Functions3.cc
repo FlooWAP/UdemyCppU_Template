@@ -12,16 +12,11 @@ int user_input()
 bool is_even(int number)
 {
     return number % 2 == 0;
-    /* Kurze Darstellung der IfElse Abrage
-    if (user_number % 2 == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }*/
+}
 
+void print_boolean_value(bool value)
+{
+    std::cout << std::boolalpha << value;
 }
 
 int main()
@@ -30,7 +25,9 @@ int main()
     std::cout << user_number << '\n';
 
     bool result = is_even(user_number);
-    std::cout << "Is Even? " << std::boolalpha << result << '\n';
+    print_boolean_value(result);
+
+
 
     return 0;
 }
